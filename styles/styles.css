@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@300&display=swap');
+
+/* 
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Great Vibes', cursive;
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  */
+
+:root {
+  --logo-HippieBlue: #569DAA;
+  --logo-MonteCarlo: #87CBB9;
+  --logo-Cruise: #B9EDDD;
+  --logo-AthsSpecial: #EDE9D5;
+  --logo-Sazerac: #FFFBF5;
+  --logo-grey: #7B8FA1;
+  --logo-darkGrey: #6B728E;
+  --logo-peachy: #FFABAB;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  max-width: 2600px;
+  text-align: center;
+  color: #6B728E;
+  overflow-x: hidden;
+  /* background-color: #fff;   */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.banner {
+  /* background-color: #87CBB9; */
+  background-color: #FFABAB;
+  color: black;
+  font-size: 15px;
+  padding: 1px;
+}
+
+.banner p {
+  margin-top: 0px;
+  padding-top: 10px;
+}
+
+.logo, .logo-footer{
+  font-family: 'Great Vibes', cursive;
+  /* color: #569DAA; */
+  color: #FFABAB;
+  word-spacing: 8px;
+  letter-spacing: 7px;
+}
+
+nav a {
+  text-decoration: none;
+  /* color: #7B8FA1; */
+  color: #FFABAB;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav {
+  width: 30em;
+  margin: auto;
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  margin-top: 50px;
+}
+
+/* Nav hover start */
+.cool-link {
+  display: inline-block;
+}
+
+.cool-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #7B8FA1;
+  transition: width .3s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+  transition: width .3s;
+}
+
+/* nav hover end*/
+
+header {
+  display: flex;
+  height: 70vh;
+}
+
+header img {
+  width: 50%;
+}
+
+#background-video {
+  width: 50%;
+  height: 70vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-text {
+  color: #FFABAB;
+  font-weight: bolder;
+  position: absolute;
+  z-index: 1;
+  top: 250px;
+  right: 150px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 20px;
+}
+
+.hero-text button {
+  padding: 8px 23px 8px 23px;
+  color: #fff;
+  border-radius: 2px;
+  border: #EDE9D5;
+  color: #FFABAB;
+}
+
+.hero-text button:hover{
+color: #7B8FA1;
+}
+
+/* Main */
+.new-category {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.new-category div {
+  margin: 20px;
+  width: 15em;
+  height: 13em;
+}
+
+i:hover {
+  color: #F15A59;
+}
+
+.cat-1,
+.cat-2,
+.cat-3,
+.cat-4,
+.n {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cat-1 {
+  background-image: url(../images/ear10.webp);
+}
+
+.cat-2 {
+  background-image: url(../images/neck1.webp);
+}
+
+.cat-3 {
+  background-image: url(../images/ring1.webp);
+}
+
+.cat-4 {
+  background-image: url(../images/ear13.webp);
+}
+
+.cat-1:hover {
+  background-image: url(../images/ear10-10.webp);
+}
+
+.cat-2:hover {
+  background-image: url(../images/neck1-1.webp);
+}
+
+.cat-3:hover {
+  background-image: url(../images/ring1-1.webp);
+}
+
+.cat-4:hover {
+  background-image: url(../images/ear13-13.webp);
+}
+
+
+/* slieshow */
+/* external css: flickity.css */
+/* Product Section */
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.n {
+  position: relative;
+}
+
+.n i {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+
+}
+
+section {
+  margin: 70px;
+}
+
+.gallery-cell {
+  width: 20%;
+  height: 200px;
+  margin-right: 10px;
+  /* background: #8C8; */
+  counter-increment: gallery-cell;
+}
+
+.gallery {
+  width: 100%;
+}
+
+.flickity-viewport {
+  width: 100%;
+}
+
+.flickity-page-dots {
+  display: none;
+}
+
+.flickity-prev-next-button.next{
+right: -70px;
+}
+
+.flickity-prev-next-button.previous{
+  left: -70px;
+  }
+
+.card {
+  width: 20%;
+  text-align: left;
+}
+
+.card .gallery-cell {
+  width: auto;
+}
+
+.neck1 {
+  background-image: url(../images/neck3.webp);
+}
+
+.neck2 {
+  background-image: url(../images/neck4.webp);
+}
+
+.neck3 {
+  background-image: url(../images/neck5.webp);
+}
+
+.neck4 {
+  background-image: url(../images/neck6.webp);
+}
+
+.neck5 {
+  background-image: url(../images/neck7.webp);
+}
+
+.neck6 {
+  background-image: url(../images/neck8.webp);
+}
+
+.neck7 {
+  background-image: url(../images/neck2.webp);
+}
+
+.neck8 {
+  background-image: url(../images/neck10.webp);
+}
+
+.ear1 {
+  background-image: url(../images/ear2.webp);
+}
+
+.ear2 {
+  background-image: url(../images/ear3.webp);
+}
+
+.ear3 {
+  background-image: url(../images/ear4.webp);
+}
+
+.ear4 {
+  background-image: url(../images/ear5.webp);
+}
+
+.ear5 {
+  background-image: url(../images/ear6.webp);
+}
+
+.ear6 {
+  background-image: url(../images/ear7.webp);
+}
+
+.ear7 {
+  background-image: url(../images/ear8.webp);
+}
+
+.ear8 {
+  background-image: url(../images/ear9.webp);
+}
+
+.ring1 {
+  background-image: url(../images/ring1.webp);
+}
+
+.ring2 {
+  background-image: url(../images/ring2.webp);
+}
+
+.ring3 {
+  background-image: url(../images/ring3.webp);
+}
+
+.ring4 {
+  background-image: url(../images/ring4.webp);
+}
+
+.ring5 {
+  background-image: url(../images/ring5.webp);
+}
+
+.ring6 {
+  background-image: url(../images/ring6.webp);
+}
+
+.ring7 {
+  background-image: url(../images/ring7.webp);
+}
+
+.ring8 {
+  background-image: url(../images/ring8.webp);
+}
+
+/* About */
+.about {
+  background-color: #FFABAB;
+  height: 75vh;
+  text-align: left;
+  line-height: 23px;
+  margin-bottom: 90px;
+}
+
+.about-img2{
+  display: none;
+}
+
+.about div {
+  display: flex;
+  padding: 45px;
+  justify-content: space-between;
+  border-radius: 16px;
+}
+
+.about img {
+  width: 330px;
+}
+
+.about h3{
+  font-size: 30px;
+  width: ;
+}
+
+.about p {
+  width: 600px;
+  margin: auto;
+}
+
+/* Discount Section */
+.discount{
+background: rgba(123, 143, 161, 0.27);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.2px);
+-webkit-backdrop-filter: blur(6.2px);
+border: 1px solid rgba(123, 143, 161, 0.1);
+padding: 50px 80px 80px 80px;
+margin-bottom: 20px;
+}
+
+.discount input{
+  padding: 16px 30px 16px 30px;
+}
+
+/* Contact */
+.contact{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+  text-align: left;
+}
+
+.contact div{
+  width: 50%;
+}
+
+.contact > div:first-child{
+  margin-right: 40px;
+}
+
+.contact > div:last-child{
+  margin-left: 40px;
+}
+
+.location{
+padding: 30px;
+}
+
+/* Footer */
+footer {
+  background-color: #FFABAB;
+  padding: 40px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+footer div{
+  width: 33%;
+}
+
+footer input{
+  padding: 16px 25px 16px 25px;
+}
+
+footer a{
+  text-decoration: none;
+}
+
+footer i{
+margin-right: 15px;
+font-size: 20px;
+}
+
+footer button{
+  padding: 10px 30px 10px 30px ;
+  background-color: #fff;
+  color: #6B728E;
+  border: 0px;
+}
+
+footer button:hover{
+  color: #FFABAB;
+}
+
+.logo-footer{
+  color: #fff;
+}
+
+@media screen and (max-width: 1270px){
+  
+}
+
+@media screen and (max-width: 720px){
+footer{
+  display:block
+}
+
+footer div{
+  margin: auto;
+  width: 100%;
+}
+
+header video{
+display: none;
+}
+
+header{
+height: 60vh;
+}
+
+.hero-text p{
+background-color: #fff;
+padding: 15px;
+}
+
+.new-category {
+  display: inline-block;
+}
+
+.contact{
+  display: inline-block;
+margin: auto;
+}
+
+.contact div{
+  width: 100%;
+}
+
+.contact > div:first-child{
+  margin-right: 0px;
+}
+
+.contact > div:last-child{
+  margin-left: 0px;
+}
+
+.about{
+  height: 88vh;
+}
+
+.about p{
+  width: 96%;
+}
+
+.about-img1{
+  display: none;
+}
+
+.about-img2{
+display: inline-block;
+margin: auto;
+margin-top: 20px;
+}
+
+.about div{
+  display: inline-block;
+}
+
+.card {
+  width: 90%;
+}
+
+
+
+
+
+}
